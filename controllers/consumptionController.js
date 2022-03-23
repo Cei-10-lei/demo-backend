@@ -23,7 +23,10 @@ export const getAllFields = async (req, res) => {
 export const insertNewField = async (req, res) => {
     const body = req.body;
     body.consumption = Number.parseFloat(body.consumption);
-    const newField = new ConsumptionModel({...body, time: body.time !== undefined ? new Date() : body.time});
+    const newField = new ConsumptionModel({
+        ...body, 
+        time: body.time !== undefined ? new Date() : body.time
+    });
     console.log(newField);
     
     try {

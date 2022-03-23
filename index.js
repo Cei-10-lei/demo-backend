@@ -18,9 +18,7 @@ app.get('/', (req, res) => {
 
 app.use("/consumption", consumption);
 
-// app.listen(8081, () => console.log('Example app is listening on port 8081.'));
-
-const DATABASE_URL = 'mongodb://localhost:27017/polihack-test';
+const DATABASE_URL = 'mongodb://localhost:27017/polihack-demo';
 mongoose.connect(DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => app.listen(8081, () => console.log("App is listening on port 8081")))
   .catch(error => console.log(error))
