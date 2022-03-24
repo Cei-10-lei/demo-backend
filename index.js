@@ -1,6 +1,5 @@
 import express from 'express';
 import consumption from './routes/consumption.js';
-import initMongoose from './db/init.js';
 import mongoose from 'mongoose';
 
 import bodyParser from 'body-parser';
